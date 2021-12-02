@@ -27,11 +27,13 @@ const init = function () {
   current1El.textContent = 0;
 
   diceEl.classList.add('hidden');
-  player0EL.classList.remove('player--winner');
-  player1EL.classList.remove('player--winner');
-  player0EL.classList.add('player--active');
-  player1EL.classList.remove('player--active');
+  player0El.classList.remove('player--winner');
+  player1El.classList.remove('player--winner');
+  player0El.classList.add('player--active');
+  player1El.classList.remove('player--active');
 };
+
+init();
 
 const switchPlayer = function () {
   document.getElementById(`current--${activePlayer}`).textContent = 0;
@@ -40,8 +42,6 @@ const switchPlayer = function () {
   player0El.classList.toggle('player--active');
   player1El.classList.toggle('player--active');
 };
-
-init();
 
 //Roling dice functionality
 btnRoll.addEventListener('click', function () {
